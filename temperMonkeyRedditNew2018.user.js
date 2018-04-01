@@ -22,7 +22,7 @@ var expression0 = /\/$/g;
 var res0 = expression0.test(string);
 
 // If current URL doesn't end with forward slash, add forward slash.
-if(res0){
+if(!res0){
     string = string + "/";
 }
 
