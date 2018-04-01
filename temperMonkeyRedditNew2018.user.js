@@ -23,8 +23,6 @@ var res0 = expression0.test(string);
 
 // If current URL doesn't end with forward slash, add forward slash.
 if(res0){
-
-} else {
     string = string + "/";
 }
 
@@ -45,7 +43,5 @@ var res = expression.test(string);
 if(res) {
     var newSite = string + "new";
     window.location = newSite;
-} else {
-
-}
+} 
 })();
