@@ -41,7 +41,6 @@ var res = expression.test(string);
 
 // redirect to "new" section subreddit.
 if(res) {
-    var newSite = string + "new";
-    window.location = newSite;
+    window.location = string + "new";
 } 
 })();
