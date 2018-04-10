@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Autodirect reddit sub to "New" section
+// @name         TemperMonkey reddit bypass 2018
 // @namespace    http*://www.reddit.com/*
 // @version      0.1
 // @description  try to take over the world!
@@ -11,19 +11,18 @@
 (function() {
     'use strict';
 
-  // GreaseMonkey code to bypass the "hot" section subreddits.
+// GreaseMonkey code to bypass the "hot" section subreddits.
 // Does not work for the main Reddit.com page.
 
 // obtain Current URL
-var string = document.URL;
+var myURL = document.URL;
 
-// check if URL ends with a forward slash
-var expression0 = /\/$/g;
-var res0 = expression0.test(string);
+// test if current URL ends with a forward slash
+var res0 = /\/$/g.test(myURL);
 
 // If current URL doesn't end with forward slash, add forward slash.
 if(!res0){
-    string = string + "/";
+    myURL = myURL + "/";
 }
 
 /* For specified Reddit URL add new at the end of URL. e.g.
@@ -36,11 +35,12 @@ if(!res0){
    Thanks to "foufos", http://stackoverflow.com/users/2604433/foufos
 */
 
-var expression = /(http|https):\/\/www.reddit.com\/r\/([^\/\r\n]+)\/$/g;
-var res = expression.test(string);
+//test for reddit URL
+var res = /(http|https):\/\/www.reddit.com\/r\/([^\/\r\n]+)\/$/g.test(myURL);
 
-// redirect to "new" section subreddit.
+// redirect to "new" subreddit section.
 if(res) {
-    window.location = string + "new";
-} 
+    window.location = myURL + "new";
+}
+
 })();
