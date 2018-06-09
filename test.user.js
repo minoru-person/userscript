@@ -15,19 +15,19 @@
 // Does not work for the main Reddit.com page.
 
 // obtain Current URL
-var myURL = document.URL;
-var regTest = /http*:\/\/www.reddit.com\/*/g;
+//var myURL = document.URL;
+//var regTest = /http*:\/\/www.reddit.com\/*/g;
 
 // test if current URL ends with a forward slash
-var res0 = regTest.test(myURL);
+//var res0 = regTest.test(myURL);
 
-alert(res0);
+alert('res0');
 
 // If current URL doesn't end with forward slash, add forward slash.
-
+/*
 if(res0){
     //myURL = myURL + "/";
 }
-
+*/
 
 })();
