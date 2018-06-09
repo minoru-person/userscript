@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 
-// GreaseMonkey code to bypass the "hot" section subreddits.
+// GreaseMonkey code to skip "hot" section subreddits.
 // Does not work for the main Reddit.com page.
 
 // obtain Current URL
