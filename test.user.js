@@ -11,23 +11,9 @@
 (function() {
     'use strict';
 
-// GreaseMonkey code to bypass the "hot" section subreddits.
-// Does not work for the main Reddit.com page.
+var myURL = document.URL;
+myURL = myURL.replace("www", "old");
 
-// obtain Current URL
-//var myURL = document.URL;
-//var regTest = /http*:\/\/www.reddit.com\/*/g;
-
-// test if current URL ends with a forward slash
-//var res0 = regTest.test(myURL);
-
-alert('res0');
-
-// If current URL doesn't end with forward slash, add forward slash.
-/*
-if(res0){
-    //myURL = myURL + "/";
-}
-*/
+window.location = myURL;
 
 })();
