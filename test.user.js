@@ -14,6 +14,6 @@
 var myURL = document.URL;
 myURL = myURL.replace("www", "old");
 
-window.location = myURL;
 
+setInterval(function(){ window.location = myURL;}, 1500);
 })();
